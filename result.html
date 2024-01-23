@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html
+ 
+lang="en">
+
+<head>
+
+    
+<meta
+ 
+charset="UTF-8">
+
+    
+<meta
+ 
+name="viewport"
+ 
+content="width=device-width, initial-scale=1.0">
+
+    
+<title>Financial Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    {% if results %}
+        {% for flag, value in results["flags"].items() %}
+            <h2>{{ flag }}</h2>
+            <p>{{ value }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Error: No results available.</p>
+    {% endif %}
+</body>
+</html>
